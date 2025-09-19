@@ -8,5 +8,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('Welcome to National Computing Education Accreditation Council!');
+  protected readonly title = signal('Welcome to Nceac App!');
 }

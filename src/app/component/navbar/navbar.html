@@ -1,0 +1,50 @@
+<nav class="bg-amber-950 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <span class="text-xl font-bold text-blue-600">MyApp</span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a routerLink="/home" class="text-white hover:text-blue-600 font-medium transition">Home</a>
+                <a routerLink="/about" class="text-white hover:text-blue-600 font-medium transition">About</a>
+                <a routerLink="/contact" class="text-white hover:text-blue-600 font-medium transition">Contact</a>
+            </div>
+            <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-white hover:text-blue-600 focus:outline-none"
+                (click)="toggleMobileMenu()">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
+
+            <!-- <div class="md:hidden flex items-center">
+                <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div> -->
+        </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-2 pt-2 pb-3 space-y-1 bg-white">
+        <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+        <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+    </div>
+</nav>
+<!-- Move the mobile menu toggle logic to the Angular component (navbar.component.ts) -->
+
+<!-- No <script> tag needed in the HTML for Angular. 
+    Instead, add a click handler to the button and use property binding for menu visibility. -->
+
+<!-- Update the button: -->
+
+
+<!-- Update the mobile menu div: -->
+<div id="mobile-menu" class="md:hidden px-2 pt-2 pb-3 space-y-1 bg-white" [class.hidden]="!mobileMenuOpen">
+    <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+    <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+    <a href="#" class="block text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+</div>
